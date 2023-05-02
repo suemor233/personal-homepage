@@ -1,7 +1,11 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import '../assets/styles/index.css'
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = localFont({
+  src: '../assets/fonts/xiaolai.ttf',
+  variable: '--font-xiaolai'
+})
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${font.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }
