@@ -1,11 +1,11 @@
 import '../assets/styles/index.css'
+
 import localFont from 'next/font/local'
 
 const font = localFont({
   src: '../assets/fonts/xiaolai.ttf',
-  variable: '--font-xiaolai'
+  variable: '--font-xiaolai',
 })
-
 
 export const metadata = {
   title: 'Create Next App',
@@ -19,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${font.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <div className="bg-[url('/kirakirashiro23.png')] fixed inset-0 -z-10 opacity-25 bg-cover bg-center" />
+      </body>
     </html>
   )
 }

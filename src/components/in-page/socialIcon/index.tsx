@@ -1,9 +1,16 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import type { FC, ReactNode } from 'react'
+import { FC, ReactNode, useEffect } from 'react'
+import { client } from '~/services';
 
 const SocalIcon: FC<{ icon: ReactNode; link: string }> = ({ icon, link }) => {
+  // useEffect(() => {
+  //   ;(async () => {
+  //     const data = await client.aggregate.getAggregateData()
+  //     console.log(data)
+  //   })()
+  // }, [])
   return (
     <motion.a
       href={link}

@@ -1,11 +1,14 @@
+import axios from 'axios'
 import Image from 'next/image'
 import { FaBloggerB, FaGithub, FaTelegram, FaTwitter } from 'react-icons/fa'
 
+import Posts from '~/components/in-page/posts'
 import SocalIcon from '~/components/in-page/socialIcon'
+import { apiClient, client } from '~/services'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 gap-6">
+    <main className="flex  flex-col items-center p-24 gap-6">
       <Image
         src="https://y.suemor.com/images89030875.jpeg"
         alt="suemor avatar"
@@ -20,6 +23,7 @@ export default function Home() {
           <SocalIcon {...item} key={item.link} />
         ))}
       </section>
+      <Posts />
     </main>
   )
 }
