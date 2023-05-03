@@ -1,10 +1,8 @@
-import axios from 'axios'
 import Image from 'next/image'
 import { FaBloggerB, FaGithub, FaTelegram, FaTwitter } from 'react-icons/fa'
 
 import Posts from '~/components/in-page/posts'
 import SocalIcon from '~/components/in-page/socialIcon'
-import { apiClient, client } from '~/services'
 
 export default function Home() {
   return (
@@ -23,6 +21,7 @@ export default function Home() {
           <SocalIcon {...item} key={item.link} />
         ))}
       </section>
+      {/* @ts-expect-error */}
       <Posts />
     </main>
   )
