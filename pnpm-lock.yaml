@@ -10,12 +10,14 @@ specifiers:
   '@types/react-dom': 18.2.1
   autoprefixer: 10.4.14
   axios: ^1.4.0
+  devicon: ^2.15.1
   framer-motion: ^10.12.7
   next: 13.3.4
   postcss: 8.4.23
   react: 18.2.0
   react-dom: 18.2.0
   react-icons: ^4.8.0
+  react-wrap-balancer: ^0.4.1
   tailwindcss: 3.3.2
   typescript: 5.0.4
 
@@ -27,12 +29,14 @@ dependencies:
   '@types/react-dom': 18.2.1
   autoprefixer: 10.4.14_postcss@8.4.23
   axios: 1.4.0
+  devicon: 2.15.1
   framer-motion: 10.12.7_biqbaboplfbrettd7655fr4n2y
   next: 13.3.4_biqbaboplfbrettd7655fr4n2y
   postcss: 8.4.23
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
+  react-wrap-balancer: 0.4.1_react@18.2.0
   tailwindcss: 3.3.2
   typescript: 5.0.4
 
@@ -1911,6 +1915,10 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: false
 
+  /devicon/2.15.1:
+    resolution: {integrity: sha512-iyapbDVaq1PgMSMZ4IekgjH230aSUU4kHmZ142lQ2TJ+9HB4P4V78eNDkyaQEEoi0KJhxIGPcTSFqxHaZ4OMyw==}
+    dev: false
+
   /didyoumean/1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
     dev: false
@@ -3279,6 +3287,14 @@ packages:
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
+
+  /react-wrap-balancer/0.4.1_react@18.2.0:
+    resolution: {integrity: sha512-KbIwnnCBCxj5u4yr76NXKKriM94VL33LtO9bE0sedCp4yqdGYJD8TGU+2zlPxkguH5xxKxdapBtMYdMAODk/QQ==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}

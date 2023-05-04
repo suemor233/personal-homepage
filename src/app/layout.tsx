@@ -1,6 +1,7 @@
 import '../assets/styles/index.css'
 
 import localFont from 'next/font/local'
+import { Provider as BalancersProvider } from 'react-wrap-balancer'
 
 const font = localFont({
   src: '../assets/fonts/xiaolai.ttf',
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${font.variable}`}>
       <body>
-        {children}
+        <BalancersProvider>{children}</BalancersProvider>
         <div className="bg-[url('/kirakirashiro23.png')] fixed inset-0 -z-10 opacity-25 bg-cover bg-center" />
       </body>
     </html>
