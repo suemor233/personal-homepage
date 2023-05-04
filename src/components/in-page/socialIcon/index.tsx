@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import type { FC, ReactNode } from 'react'
 
 const SocalIcon: FC<{ icon: ReactNode; link: string }> = ({ icon, link }) => {
-
   return (
     <motion.a
       href={link}

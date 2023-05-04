@@ -1,6 +1,6 @@
-import { FC, ReactNode } from 'react'
+import type { FC, ReactNode } from 'react'
 
-import { IconAndroid, IconJavaScript, IconMongodb, IconNest, IconNext, IconNode, IconReact, IconTailwind, IconTypeScript, IconVue } from '~/components/universal/icons'
+import { IconAndroid, IconCSS3, IconDocker, IconHTML5, IconJavaScript, IconJest, IconMongodb, IconNest, IconNext, IconNode, IconReact, IconSass, IconTailwind, IconTypeScript, IconVue } from '~/components/universal/icons'
 
 interface StackProps {
   name: string
@@ -11,8 +11,8 @@ const TechStacks = () => {
   return (
     <div className="mt-32 w-full">
       <h3 className="text-4xl text-center">技术栈</h3>
-      <section className="grid grid-cols-5 gap-12 mt-12 items-center">
-        {techStacks.map((item, index) => (
+      <section className="grid grid-cols-3 md:grid-cols-5 gap-12 mt-12 items-center">
+        {techStacks.map(item => (
           <Stacks key={item.name} {...item} />
         ))}
       </section>
@@ -30,6 +30,14 @@ const Stacks: FC<StackProps> = ({name,icon}) => {
 
 const techStacks: StackProps[] = [
   {
+    icon: <IconHTML5 />,
+    name: 'HTML5',
+  },
+  {
+    icon: <IconCSS3 />,
+    name: 'CSS3',
+  },
+  {
     icon: <IconJavaScript />,
     name: 'JavaScript',
   },
@@ -44,6 +52,14 @@ const techStacks: StackProps[] = [
   {
     icon: <IconNext />,
     name: 'NextJS',
+  },
+  {
+    icon: <IconJest />,
+    name: 'Jest',
+  },
+  {
+    icon: <IconSass />,
+    name: 'Sass',
   },
   {
     icon: <IconTailwind />,
@@ -68,6 +84,10 @@ const techStacks: StackProps[] = [
   {
     icon: <IconAndroid />,
     name: 'Android',
+  },
+  {
+    icon: <IconDocker />,
+    name: 'Docker',
   },
 ]
 

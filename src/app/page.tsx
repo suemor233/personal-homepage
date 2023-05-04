@@ -1,9 +1,10 @@
 import Image from 'next/image'
-import { FaBloggerB, FaGithub, FaTelegram, FaTwitter } from 'react-icons/fa'
 
 import Posts from '~/components/in-page/posts'
+import Projects from '~/components/in-page/projects'
 import SocalIcon from '~/components/in-page/socialIcon'
 import TechStacks from '~/components/in-page/techStacks'
+import { socialList } from '~/constants/socialList'
 
 export default function Home() {
   return (
@@ -28,25 +29,9 @@ export default function Home() {
       <TechStacks />
       {/* @ts-expect-error */}
       <Posts />
+      {/* @ts-expect-error */}
+      <Projects />
     </main>
   )
 }
 
-const socialList = [
-  {
-    icon: <FaTwitter />,
-    link: 'https://twitter.com/Suemor233',
-  },
-  {
-    icon: <FaGithub />,
-    link: 'https://github.com/suemor233',
-  },
-  {
-    icon: <FaTelegram />,
-    link: 'https://t.me/Suemor',
-  },
-  {
-    icon: <FaBloggerB />,
-    link: 'https://suemor.com',
-  },
-]

@@ -3,6 +3,9 @@ import '../assets/styles/index.css'
 import localFont from 'next/font/local'
 import { Provider as BalancersProvider } from 'react-wrap-balancer'
 
+import Footer from '~/components/in-page/footer'
+import { ProgressBar } from '~/components/universal/progressBar'
+
 const font = localFont({
   src: '../assets/fonts/xiaolai.ttf',
   variable: '--font-xiaolai',
@@ -21,8 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${font.variable}`}>
       <body>
-        <BalancersProvider>{children}</BalancersProvider>
-        <div className="bg-[url('/kirakirashiro23.png')] fixed inset-0 -z-10 opacity-25 bg-cover bg-center" />
+        <BalancersProvider>
+          {children}
+          <Footer />
+        </BalancersProvider>
+
+        <ProgressBar />
+        <div className="bg-[url('/background.png')] fixed inset-0 -z-10 opacity-25 bg-cover bg-center" />
       </body>
     </html>
   )

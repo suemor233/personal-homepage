@@ -1,29 +1,30 @@
 import NextImage from 'next/image'
-import { FC } from 'react'
+import type { FC } from 'react'
 import Balancer from 'react-wrap-balancer'
 
 import type { AggregateTopPost } from '@mx-space/api-client'
 
 import { apiClient } from '~/services'
+import { ViewportLayout } from '~/components/layouts/viewportLayout'
+
 
 const Posts = async () => {
   const post = await apiClient.aggregate.getTop()
   return (
-    <div className="mt-32 w-full">
-      <h3 className="text-4xl">近日博文</h3>
+    <ViewportLayout title='最新博文'>
       <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 w-full mt-3">
         {post.posts.map(
           (item, index) => index < 3 && <PostsItem {...item} key={item.id} />,
         )}
       </section>
-    </div>
+    </ViewportLayout>
   )
 }
 
 const PostsItem: FC<AggregateTopPost> = ({ images, title }) => {
   return (
     <a
-      className="bg-white border rounded-md p-4  hover:border-gray-500 transition-all duration-200"
+      className="bg-white border rounded-md p-4  hover:border-gray-400 transition-all duration-200 shadow-md"
       href=""
     >
       <NextImage
@@ -38,9 +39,9 @@ const PostsItem: FC<AggregateTopPost> = ({ images, title }) => {
         style={{ width: '100%', height: 'auto', objectFit: 'cover' }} // optional
         className="rounded-md"
       />
-        <h4 className="mt-5 text-xl text-center">
-          <Balancer>{title}</Balancer>
-        </h4>
+      <h4 className="mt-5 text-2xl text-center">
+        <Balancer>{title}</Balancer>
+      </h4>
     </a>
   )
 }
