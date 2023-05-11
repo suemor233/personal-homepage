@@ -1,3 +1,8 @@
+
+const bundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+const plugins = [bundleAnalyzer]
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -13,4 +18,7 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = plugins.reduce(
+  (config, plugin) => plugin(config),
+  nextConfig,
+)

@@ -13,7 +13,7 @@ interface ProjectItemProps {
 
 const Projects = async () => {
   return (
-    <ViewportLayout title="贡献项目">
+    <ViewportLayout title="个人项目">
       <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 w-full mt-3">
         {projectData.map((item, index) => (
           <ProjectItem {...item} key={item.title} />
@@ -31,19 +31,20 @@ const ProjectItem: FC<ProjectItemProps> = ({
 }) => {
   return (
     <a
-      className="bg-zinc-50 border rounded-md p-4  hover:border-gray-300 transition-all duration-200"
-      href=""
+      className="bg-zinc-50 border rounded-md p-4  hover:border-gray-300 transition-all duration-200 w-full"
+      href={link}
+      target="_blank"
     >
-      <NextImage
-        src={cover}
-        alt={title}
-        quality={100}
-        width={0}
-        height={0}
-        sizes="100vw"
-        style={{ width: '100%', height: 'auto', objectFit: 'cover' }} // optional
-        className="rounded-md shadow-md"
-      />
+      <div className='relative w-auto h-[200px] bg-cover'>
+        <NextImage
+          src={cover}
+          alt={title}
+          fill
+          style={{objectFit:"cover"}}
+          className="rounded-md shadow-md"
+        />
+      </div>
+
       <h4 className="mt-5 text-2xl">
         <Balancer>{title}</Balancer>
       </h4>
@@ -55,31 +56,29 @@ const ProjectItem: FC<ProjectItemProps> = ({
 const projectData: ProjectItemProps[] = [
   {
     title: '个人博客',
-    description: '使用 NextJS + TailwindCSS + Vercel 搭建的个人博客',
-    cover:
-      'https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhulu.138888a5.png&w=750&q=55',
-    link: '',
+    description: '使用 NextJS + TailwindCSS + NestJS + MongoDB 搭建的个人博客',
+    cover: 'https://y.suemor.com/imageshomepage-project-1.jpg',
+    link: 'https://github.com/suemor233/suemor-blog',
   },
   {
-    title: '个人博客',
-    description: '使用 NextJS + TailwindCSS + Vercel 搭建的个人博客',
-    cover:
-      'https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhulu.138888a5.png&w=750&q=55',
-    link: '',
+    title: '仿掘金官网',
+    description: '第五届字节青训营项目，NextJS + Less 编写，获得一等奖',
+    cover: 'https://y.suemor.com/imageshomepage-project-2.jpg',
+    link: 'https://github.com/Bocchi-Developers/juejin',
   },
   {
-    title: '个人博客',
-    description: '使用 NextJS + TailwindCSS + Vercel 搭建的个人博客',
+    title: 'CLI 工具',
+    description: '一个 CLI 可以快捷创建项目，或者根据已有项目快捷配置 ESLint 和 Pretter',
     cover:
-      'https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhulu.138888a5.png&w=750&q=55',
-    link: '',
+      'https://y.suemor.com/imageshomepage-project-3.jpg',
+    link: 'https://github.com/suemor233/create-project',
   },
   {
-    title: '个人博客',
-    description: '使用 NextJS + TailwindCSS + Vercel 搭建的个人博客',
+    title: '失物招领微信小程序',
+    description: '一款闲鱼风格的失物招领微信小程序，使用 Taro 编写',
     cover:
-      'https://nextjs.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhulu.138888a5.png&w=750&q=55',
-    link: '',
+      'https://y.suemor.com/imageslost2.jpg',
+    link: 'https://github.com/suemor233/LostAndFound-weapp',
   },
 ]
 
