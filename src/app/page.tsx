@@ -16,8 +16,8 @@ export default function Home() {
         height={180}
         className="rounded-full shadow-md"
       />
-      <h2 className="text-6xl font-semibold">Suemor</h2>
-      <h3 className="text-5xl text-center leading-normal">
+      <h2 className=" text-4xl md:text-6xl font-semibold">Suemor</h2>
+      <h3 className="text-3xl md:text-5xl text-center leading-normal">
         一只正在学习前端的萌新
       </h3>
 
@@ -34,4 +34,3 @@ export default function Home() {
     </main>
   )
 }
-

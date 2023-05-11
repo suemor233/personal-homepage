@@ -9,7 +9,7 @@ interface StackProps {
 
 const TechStacks = () => {
   return (
-    <div className="mt-32 w-full">
+    <div className="mt-14 md:mt-32 w-full">
       <h3 className="text-4xl text-center">技术栈</h3>
       <section className="grid grid-cols-3 md:grid-cols-5 gap-12 mt-12 items-center">
         {techStacks.map(item => (
