@@ -7,7 +7,7 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md'
 const Header = () => {
   const { theme, setTheme } = useTheme()
   const currentTheme = useMemo(
-    () => (theme === 'light' ? 'dark' : 'light'),
+    () => (theme === 'dark' ? 'light' : 'dark'),
     [theme],
   )
   return (
