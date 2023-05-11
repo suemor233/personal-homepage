@@ -23,11 +23,14 @@ const Posts = async () => {
 const PostsItem: FC<AggregateTopPost & { meta?: { cover: string } }> = ({
   meta,
   title,
+  category,
+  slug
 }) => {
   return (
     <a
       className="bg-white dark:bg-zinc-700 dark:border-zinc-500 border rounded-md p-4  hover:!border-gray-400 transition-all duration-200 shadow-md"
-      href=""
+      href={`https://suemor.com/posts/${category.slug}/${slug}`}
+      target='_blank'
     >
       <div className="relative w-auto h-[200px] bg-cover">
         <NextImage
