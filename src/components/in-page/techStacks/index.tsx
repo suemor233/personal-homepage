@@ -20,9 +20,9 @@ const TechStacks = () => {
   )
 }
 
-const Stacks: FC<StackProps> = ({name,icon}) => {
+const Stacks: FC<StackProps> = ({icon}) => {
   return (
-    <div className="bg-white rounded-2xl shadow-md h-24 w-24 p-4 mx-auto overflow-hidden">
+    <div className="rounded-2xl shadow-md h-24 w-24 p-4 mx-auto overflow-hidden dark:bg-zinc-700">
       {icon}
     </div>
   )

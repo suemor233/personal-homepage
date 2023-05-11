@@ -6,7 +6,7 @@ import { socialList } from '~/constants/socialList'
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-zinc-100 bg-opacity-70">
+    <footer className="w-full bg-zinc-100 dark:bg-zinc-700 bg-opacity-70">
       <div className="max-w-[1200px] mx-auto py-10 flex justify-between items-center px-4">
         <div className="text-xl md:text-2xl">
           <Balancer>@ 2023 Suemor.</Balancer>

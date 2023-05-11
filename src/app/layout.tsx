@@ -2,6 +2,7 @@ import '../assets/styles/index.css'
 
 import localFont from 'next/font/local'
 import type { PropsWithChildren } from 'react'
+
 import { ProgressBar } from '~/components/universal/progressBar'
 
 import { AppRootProviders } from './providers'
@@ -17,14 +18,20 @@ export const metadata = {
 }
 
 interface PropsWithSlot extends PropsWithChildren {
+  header: React.ReactNode
   footer: React.ReactNode
 }
 
-export default function RootLayout({ children, footer }: PropsWithSlot) {
+export default function RootLayout({
+  children,
+  footer,
+  header,
+}: PropsWithSlot) {
   return (
     <html lang="zh" className={`${font.variable}`}>
       <body>
         <AppRootProviders>
+          {header}
           {children}
           {footer}
           <ProgressBar />

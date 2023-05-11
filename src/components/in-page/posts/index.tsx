@@ -26,7 +26,7 @@ const PostsItem: FC<AggregateTopPost & { meta?: { cover: string } }> = ({
 }) => {
   return (
     <a
-      className="bg-white border rounded-md p-4  hover:border-gray-400 transition-all duration-200 shadow-md"
+      className="bg-white dark:bg-zinc-700 dark:border-zinc-500 border rounded-md p-4  hover:!border-gray-400 transition-all duration-200 shadow-md"
       href=""
     >
       <div className="relative w-auto h-[200px] bg-cover">

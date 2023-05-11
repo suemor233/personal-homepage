@@ -31,7 +31,7 @@ const ProjectItem: FC<ProjectItemProps> = ({
 }) => {
   return (
     <a
-      className="bg-zinc-50 border rounded-md p-4  hover:border-gray-300 transition-all duration-200 w-full"
+      className="bg-zinc-50 dark:bg-zinc-700 dark:border-zinc-500 border rounded-md p-4  hover:!border-gray-300 transition-all duration-200 w-full"
       href={link}
       target="_blank"
     >

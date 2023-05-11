@@ -21,7 +21,7 @@ export default function Home() {
         一只正在学习前端的萌新
       </h3>
 
-      <section className="text-zinc-500 flex text-3xl gap-8 mt-2">
+      <section className="text-zinc-500 dark:text-zinc-400 flex text-3xl gap-8 mt-2">
         {socialList.map((item) => (
           <SocalIcon {...item} key={item.link} />
         ))}
