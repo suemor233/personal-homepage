@@ -1,5 +1,6 @@
 import '../assets/styles/index.css'
 
+import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import type { PropsWithChildren } from 'react'
 
@@ -12,9 +13,9 @@ const font = localFont({
   variable: '--font-xiaolai',
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Suemor｜个人主页',
-  description: '一只正在学习前端的萌新',
+  description: '一只正在学习前端的萌新'
 }
 
 interface PropsWithSlot extends PropsWithChildren {

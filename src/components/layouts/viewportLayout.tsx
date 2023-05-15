@@ -2,13 +2,13 @@
 
 import { motion } from 'framer-motion'
 import type { FC, PropsWithChildren } from 'react'
-import { useMedia } from 'react-use'
+import { useWideMedia } from '~/utils/media'
 
 export const ViewportLayout: FC<PropsWithChildren & { title?: string }> = ({
   children,
   title,
 }) => {
-  const isWide = useMedia('(min-width: 768px)', true)
+  const isWide = useWideMedia()
   return (
     <motion.div
       className="mt-14 md:mt-32 w-full"
