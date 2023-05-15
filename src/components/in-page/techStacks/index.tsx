@@ -9,8 +9,8 @@ interface StackProps {
 
 const TechStacks = () => {
   return (
-    <div className="mt-14 md:mt-32 w-full">
-      <h3 className="text-4xl text-center">技术栈</h3>
+    <div className="mt-10 md:mt-16 w-full">
+      <h3 className="text-3xl text-center">技术栈</h3>
       <section className="grid grid-cols-3 md:grid-cols-5 gap-12 mt-12 items-center">
         {techStacks.map(item => (
           <Stacks key={item.name} {...item} />
@@ -22,7 +22,7 @@ const TechStacks = () => {
 
 const Stacks: FC<StackProps> = ({icon}) => {
   return (
-    <div className="rounded-2xl shadow-md h-24 w-24 p-4 mx-auto overflow-hidden dark:bg-zinc-700">
+    <div className="rounded-2xl shadow-md h-20 w-20 p-4 mx-auto overflow-hidden dark:bg-zinc-700">
       {icon}
     </div>
   )

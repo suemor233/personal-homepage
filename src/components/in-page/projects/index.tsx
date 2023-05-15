@@ -15,7 +15,7 @@ const Projects = async () => {
   return (
     <ViewportLayout title="个人项目">
       <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 w-full mt-3">
-        {projectData.map((item, index) => (
+        {projectData.map((item) => (
           <ProjectItem {...item} key={item.title} />
         ))}
       </section>
@@ -35,12 +35,12 @@ const ProjectItem: FC<ProjectItemProps> = ({
       href={link}
       target="_blank"
     >
-      <div className='relative w-auto h-[200px] bg-cover'>
+      <div className="relative w-auto h-[200px] bg-cover">
         <NextImage
           src={cover}
           alt={title}
           fill
-          style={{objectFit:"cover"}}
+          style={{ objectFit: 'cover' }}
           className="rounded-md shadow-md"
         />
       </div>
@@ -68,16 +68,15 @@ const projectData: ProjectItemProps[] = [
   },
   {
     title: 'CLI 工具',
-    description: '一个 CLI 可以快捷创建项目，或者根据已有项目快捷配置 ESLint 和 Pretter',
-    cover:
-      'https://y.suemor.com/imageshomepage-project-3.jpg',
+    description:
+      '一个 CLI 可以快捷创建项目，或者根据已有项目快捷配置 ESLint 和 Pretter',
+    cover: 'https://y.suemor.com/imageshomepage-project-3.jpg',
     link: 'https://github.com/suemor233/create-project',
   },
   {
     title: '失物招领微信小程序',
     description: '一款闲鱼风格的失物招领微信小程序，使用 Taro 编写',
-    cover:
-      'https://y.suemor.com/imageslost2.jpg',
+    cover: 'https://y.suemor.com/imageslost2.jpg',
     link: 'https://github.com/suemor233/LostAndFound-weapp',
   },
 ]

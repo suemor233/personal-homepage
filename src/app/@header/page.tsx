@@ -12,7 +12,7 @@ const Header = () => {
   )
   return (
     <div
-      className="absolute right-2 top-2 cursor-pointer text-2xl"
+      className="absolute right-4 top-2 cursor-pointer text-2xl"
       onClick={() => setTheme(currentTheme)}
       title={currentTheme === 'light' ? '当前亮色模式' : '当前夜间模式'}
     >

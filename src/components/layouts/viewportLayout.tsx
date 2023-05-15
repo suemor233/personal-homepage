@@ -17,7 +17,7 @@ export const ViewportLayout: FC<PropsWithChildren & { title?: string }> = ({
       viewport={{ once: true, amount: isWide ? 0.2 : 0 }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
-      <h3 className="text-4xl">{title}</h3>
+      <h3 className="text-3xl">{title}</h3>
       {children}
     </motion.div>
   )

@@ -8,6 +8,12 @@ html {
   scrollbar-width: thin;
 }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 html.dark {
   --scrollbar-bg-color: var(--auto-hover-color, theme('colors.zinc.700'));
 }
@@ -15,7 +21,7 @@ html.dark {
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-  background: var(--scrollbar-bg-color)
+  background: var(--scrollbar-bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -23,7 +29,7 @@ html.dark {
 }
 
 ::-webkit-scrollbar-corner {
-  background: var(--scrollbar-bg-color)
+  background: var(--scrollbar-bg-color);
 }
 
 ::-webkit-scrollbar-thumb,

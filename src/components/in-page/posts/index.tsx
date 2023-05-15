@@ -41,7 +41,7 @@ const PostsItem: FC<AggregateTopPost & { meta?: { cover: string } }> = ({
           className="rounded-md shadow-md"
         />
       </div>
-      <h4 className="mt-5 text-2xl text-center">
+      <h4 className="mt-5 text-xl md:text-2xl text-center">
         <Balancer>{title}</Balancer>
       </h4>
     </a>
