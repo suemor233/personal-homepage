@@ -1,19 +1,24 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import type { FC, ReactNode } from 'react'
+import { MotionA } from '~/utils/motion'
 
-const SocalIcon: FC<{ icon: ReactNode; link: string }> = ({ icon, link }) => {
+interface SocalIconProps {
+  icon: ReactNode
+  link: string
+  title: string
+}
+
+const SocalIcon: FC<SocalIconProps> = ({ icon, link, title }) => {
   return (
-    <motion.a
+    <MotionA
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={title}
       whileHover={{ scale: '1.1' }}
       transition={{ duration: 0.2, ease: 'easeInOut' }}
     >
       {icon}
-    </motion.a>
+    </MotionA>
   )
 }
 

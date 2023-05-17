@@ -1,8 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { FC, PropsWithChildren } from 'react'
 import { useWideMedia } from '~/utils/media'
+import { MotionDiv } from '~/utils/motion'
 
 export const ViewportLayout: FC<PropsWithChildren & { title?: string }> = ({
   children,
@@ -10,7 +10,7 @@ export const ViewportLayout: FC<PropsWithChildren & { title?: string }> = ({
 }) => {
   const isWide = useWideMedia()
   return (
-    <motion.div
+    <MotionDiv
       className="mt-14 md:mt-32 w-full"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -19,6 +19,6 @@ export const ViewportLayout: FC<PropsWithChildren & { title?: string }> = ({
     >
       <h3 className="text-3xl">{title}</h3>
       {children}
-    </motion.div>
+    </MotionDiv>
   )
 }
